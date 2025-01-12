@@ -8,21 +8,14 @@
 ## Mentor
 - shakil-shahan
 
-## Project Description
-Add your project description here.
+## Backend 
+- Making the Backend in Django
 
-## Getting Started
-1. Clone the repository
-2. Install dependencies
-3. Start development
+## Database
+- Postgresql
 
-## Development Guidelines
-1. Create feature branches
-2. Make small, focused commits
-3. Write descriptive commit messages
-4. Create pull requests for review
+## Database Hosting
+- Supabase
 
-## Resources
-- [Project Documentation](docs/)
-- [Development Setup](docs/setup.md)
-- [Contributing Guidelines](CONTRIBUTING.md)
+## Database Pooling
+- Transaction Pooling

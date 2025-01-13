@@ -68,6 +68,16 @@ CORS_ALLOW_HEADERS = [
     "x-requested-with",
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'kidmonix_backend.custom_auth.SupabaseAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+}
+
 # Application definition
 
 INSTALLED_APPS = [

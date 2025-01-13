@@ -34,7 +34,7 @@ import logging
         400: 'Bad Request'
     }
 )
-@csrf_exempt
+
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def login(request):
@@ -52,7 +52,7 @@ def login(request):
 
 # logger = logging.getLogger(__name__)
 
-@csrf_exempt
+
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def logout(request):
@@ -87,7 +87,7 @@ def logout(request):
         400: 'Bad Request'
     }
 )
-@csrf_exempt
+
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def signup(request):

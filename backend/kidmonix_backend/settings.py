@@ -31,13 +31,13 @@ DEBUG = True
 allowed_hosts_env = os.getenv('ALLOWED_HOSTS', '')
 ALLOWED_HOSTS = [host.strip() for host in allowed_hosts_env.split(',') if host.strip()]
 
-
+TARGET_ENVIRONMENT =  os.getenv('TARGET_ENVIRONMENT', 'development')
 def host_to_origin(host):
     if host.startswith('http://') or host.startswith('https://'):
         return host
-    elif host.startswith('localhost'):
+    elif host.startswith('localhost') and TARGET_ENVIRONMENT == 'development':
         return f'http://{host}'
-    elif host.startswith('127.0.0.1'):
+    elif host.startswith('127.0.0.1') and TARGET_ENVIRONMENT == 'development':
         return f'http://{host}'
     else:
         return f'https://{host}'
@@ -83,6 +83,7 @@ REST_FRAMEWORK = {
 INSTALLED_APPS = [
     'corsheaders',
     "rest_framework",
+    'users',
     'drf_yasg',
     'django.contrib.admin',
     'django.contrib.auth',

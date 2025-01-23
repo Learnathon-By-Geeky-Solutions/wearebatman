@@ -198,3 +198,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = '/'
 SUPABASE_URL = os.environ['SUPABASE_URL']
 SUPABASE_KEY = os.environ['SUPABASE_KEY']
+QDRANT_HOST=os.environ['QDRANT_HOST']
+QDRANT_API_KEY = os.environ['QDRANT_API_KEY']
